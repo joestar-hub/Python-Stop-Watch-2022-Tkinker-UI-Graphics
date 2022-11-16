@@ -1,9 +1,13 @@
 from tkinter import *
 from datetime import datetime
 
+#WE IMPORT THE tkinter graphical library
+
 counter = 0
 running = False
 main = True
+
+#initialize important variable
 
 def counter_label(label):
     def count():
@@ -34,6 +38,7 @@ def clocktime(label):
     
 
 def Start(label):
+    #Controling the start state
     global running,main
     running=True
     main = False
@@ -90,7 +95,7 @@ root.attributes("-alpha", 0.90)
 clocktime(label)
 
 f = Frame(root)
-root.config(bg="#282828")
+root.config(bg="#282822")
 f.configure(background="black")
 
 start = Button(f, text='Start', width=7,height=3, command=lambda:Start(label),font="Geneva 15 bold",highlightbackground="green",activeforeground='black',fg='green')
